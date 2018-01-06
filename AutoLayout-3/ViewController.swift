@@ -8,6 +8,8 @@
 
 import UIKit
 
+let MAX_STACK_SIZE = 5
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
@@ -25,15 +27,32 @@ class ViewController: UIViewController {
     @IBAction func clickAdd(_ sender: UIButton) {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "cat"))
         imageView.contentMode = .scaleAspectFit
-        stackView.addArrangedSubview(imageView)
+        stackView.insertArrangedSubview(imageView, at: 0)
+        
+        if stackView.subviews.count > MAX_STACK_SIZE {
+            removeLastSubView()
+        }
+        
+        updateLayoutWithAnimate(0.2)
     }
     
     @IBAction func clickRemove(_ sender: UIButton) {
+        removeLastSubView()
+        updateLayoutWithAnimate(0.2)
+    }
+    
+    private func removeLastSubView() {
         if let imageView = stackView.arrangedSubviews.last {
             stackView.removeArrangedSubview(imageView)
             imageView.removeFromSuperview()
         }
     }
-
+    
+    private func updateLayoutWithAnimate(_ duration: TimeInterval) {
+        UIView.animate(withDuration: duration, animations: {
+            self.stackView.layoutIfNeeded()
+        })
+    }
+    
 }
 
