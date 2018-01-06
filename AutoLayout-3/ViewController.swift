@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupUI()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func setupUI() {
+        stackView.spacing = 10
+        stackView.distribution = .fillEqually
     }
-
+    
+    @IBAction func clickAdd(_ sender: UIButton) {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "cat"))
+        imageView.contentMode = .scaleAspectFit
+        stackView.addArrangedSubview(imageView)
+    }
+    
+    @IBAction func clickRemove(_ sender: UIButton) {
+        if let imageView = stackView.arrangedSubviews.last {
+            stackView.removeArrangedSubview(imageView)
+            imageView.removeFromSuperview()
+        }
+    }
 
 }
 
