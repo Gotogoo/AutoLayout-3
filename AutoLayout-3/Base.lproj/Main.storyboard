@@ -57,7 +57,28 @@
                     <view key="view" contentMode="scaleToFill" id="sjY-M1-B4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrL-vG-DKQ" userLabel="Red View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.36470588240000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-j7-ehI" userLabel="Green View">
+                                <rect key="frame" x="0.0" y="365.5" width="375" height="301.5"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.76862745099999996" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jrL-vG-DKQ" firstAttribute="top" secondItem="GeE-CU-ywM" secondAttribute="top" id="2A5-22-tVa"/>
+                            <constraint firstItem="QgV-j7-ehI" firstAttribute="width" secondItem="jrL-vG-DKQ" secondAttribute="width" id="Mav-Q5-KCa"/>
+                            <constraint firstItem="GeE-CU-ywM" firstAttribute="trailing" secondItem="jrL-vG-DKQ" secondAttribute="trailing" id="PD9-JN-nDc"/>
+                            <constraint firstItem="QgV-j7-ehI" firstAttribute="leading" secondItem="GeE-CU-ywM" secondAttribute="leading" id="Rut-1U-Yin"/>
+                            <constraint firstItem="jrL-vG-DKQ" firstAttribute="leading" secondItem="GeE-CU-ywM" secondAttribute="leading" id="azp-WM-vxv"/>
+                            <constraint firstItem="GeE-CU-ywM" firstAttribute="bottom" secondItem="QgV-j7-ehI" secondAttribute="bottom" id="bjJ-Eo-3Vh"/>
+                            <constraint firstItem="GeE-CU-ywM" firstAttribute="trailing" secondItem="QgV-j7-ehI" secondAttribute="trailing" id="cOv-bN-9mi"/>
+                            <constraint firstItem="QgV-j7-ehI" firstAttribute="top" secondItem="jrL-vG-DKQ" secondAttribute="bottom" id="gdt-FP-awy"/>
+                            <constraint firstItem="QgV-j7-ehI" firstAttribute="height" secondItem="jrL-vG-DKQ" secondAttribute="height" id="irm-Gm-kYC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GeE-CU-ywM"/>
                     </view>
                 </viewController>
