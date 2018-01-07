@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWe-Q6-WCe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,18 +11,89 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="mfW-Y7-fgj">
+            <objects>
+                <viewController id="7y4-Yd-VGB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJZ-C3-zSP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA6-81-0Ke">
+                                <rect key="frame" x="142" y="297.5" width="90" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Size Class"/>
+                                <connections>
+                                    <segue destination="Stw-Y2-ksV" kind="show" id="2Hg-tI-v7B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-pC-IB2">
+                                <rect key="frame" x="138.5" y="397.5" width="97" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stack View"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="nHw-R9-N6p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HA6-81-0Ke" firstAttribute="centerX" secondItem="wLz-ps-My8" secondAttribute="centerX" id="7cz-xl-3iv"/>
+                            <constraint firstItem="HA6-81-0Ke" firstAttribute="centerY" secondItem="wLz-ps-My8" secondAttribute="centerY" constant="-50" id="NKF-Ds-bzG"/>
+                            <constraint firstItem="JsX-pC-IB2" firstAttribute="centerY" secondItem="wLz-ps-My8" secondAttribute="centerY" constant="50" id="qG7-cC-vIJ"/>
+                            <constraint firstItem="JsX-pC-IB2" firstAttribute="centerX" secondItem="wLz-ps-My8" secondAttribute="centerX" id="vW1-8d-7g4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wLz-ps-My8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Fp-jF-dFs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWI-Za-bdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-737" y="110"/>
+        </scene>
+        <!--Size Class View Controller-->
+        <scene sceneID="awT-VP-c0g">
+            <objects>
+                <viewController id="Stw-Y2-ksV" customClass="SizeClassViewController" customModule="AutoLayout_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sjY-M1-B4d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GeE-CU-ywM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMc-IJ-fbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="-132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vTg-ov-Zgu">
+            <objects>
+                <navigationController id="LWe-Q6-WCe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P23-2s-dZV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7y4-Yd-VGB" kind="relationship" relationship="rootViewController" id="uK6-kD-ewE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quk-1f-3ZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1460" y="111"/>
+        </scene>
+        <!--Stack View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StackViewController" customModule="AutoLayout_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-em-gj9">
-                                <rect key="frame" x="20" y="120" width="335" height="527"/>
+                                <rect key="frame" x="20" y="164" width="335" height="483"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHu-M0-G7C">
-                                <rect key="frame" x="50" y="34" width="36" height="36"/>
+                                <rect key="frame" x="50" y="78" width="36" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -30,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix0-Ga-qrs">
-                                <rect key="frame" x="254" y="34" width="71" height="36"/>
+                                <rect key="frame" x="254" y="78" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Remove"/>
                                 <connections>
@@ -59,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+            <point key="canvasLocation" x="305" y="564"/>
         </scene>
     </scenes>
 </document>

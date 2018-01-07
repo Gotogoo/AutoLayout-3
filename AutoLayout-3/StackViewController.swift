@@ -10,7 +10,7 @@ import UIKit
 
 let MAX_STACK_SIZE = 5
 
-class ViewController: UIViewController {
+class StackViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     
