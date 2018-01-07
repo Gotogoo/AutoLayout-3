@@ -14,7 +14,6 @@
 		F643B5502000CD2F005AFAC3 /* AutoLayout_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643B54F2000CD2F005AFAC3 /* AutoLayout_3Tests.swift */; };
 		F643B55B2000CD2F005AFAC3 /* AutoLayout_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643B55A2000CD2F005AFAC3 /* AutoLayout_3UITests.swift */; };
 		F643B5A320027624005AFAC3 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643B5A220027624005AFAC3 /* StackViewController.swift */; };
-		F643B5A5200276B1005AFAC3 /* SizeClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643B5A4200276B1005AFAC3 /* SizeClassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		F643B55A2000CD2F005AFAC3 /* AutoLayout_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout_3UITests.swift; sourceTree = "<group>"; };
 		F643B55C2000CD2F005AFAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F643B5A220027624005AFAC3 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
-		F643B5A4200276B1005AFAC3 /* SizeClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				F643B5A220027624005AFAC3 /* StackViewController.swift */,
-				F643B5A4200276B1005AFAC3 /* SizeClassViewController.swift */,
 				F643B53A2000CD2F005AFAC3 /* AppDelegate.swift */,
 				F643B53E2000CD2F005AFAC3 /* Main.storyboard */,
 				F643B5412000CD2F005AFAC3 /* Assets.xcassets */,
@@ -264,7 +261,6 @@
 			files = (
 				F643B53B2000CD2F005AFAC3 /* AppDelegate.swift in Sources */,
 				F643B5A320027624005AFAC3 /* StackViewController.swift in Sources */,
-				F643B5A5200276B1005AFAC3 /* SizeClassViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
